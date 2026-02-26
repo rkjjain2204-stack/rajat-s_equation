@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equation Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Equation Builder</h1>
+      <p class="subtitle">Solve linear equations in the form <code>ax + b = c</code>.</p>
+
+      <form id="equation-form" class="card" novalidate>
+        <div class="grid">
+          <label for="a">
+            a
+            <input type="number" id="a" name="a" value="2" required />
+          </label>
+          <label for="b">
+            b
+            <input type="number" id="b" name="b" value="4" required />
+          </label>
+          <label for="c">
+            c
+            <input type="number" id="c" name="c" value="10" required />
+          </label>
+        </div>
+        <div class="actions">
+          <button type="submit">Solve for x</button>
+          <button type="button" id="reset-button" class="secondary">Reset</button>
+        </div>
+      </form>
+
+      <section class="result card" aria-live="polite">
+        <h2>Result</h2>
+        <p id="equation-text" class="equation">2x + 4 = 10</p>
+        <p id="answer-text" class="answer">x = 3</p>
+        <ol id="steps" class="steps"></ol>
+      </section>
+
+      <section class="card help">
+        <h2>Local preview</h2>
+        <p>Run this command, then open the shown URL in your browser.</p>
+        <pre><code>python3 -m http.server 8000</code></pre>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
