@@ -1,0 +1,84 @@
+:root {
+  --bg: #070b1a;
+  --bg2: #151f3a;
+  --text: #edf3ff;
+  --muted: #9db1d8;
+  --primary: #5596ff;
+  --accent: #8f6dff;
+  --glass: rgba(255, 255, 255, 0.08);
+  --border: rgba(255, 255, 255, 0.18);
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at 10% 10%, #1e2b50, var(--bg));
+}
+.bg-ornament {
+  position: fixed; inset: -20% auto auto -10%; width: 600px; height: 600px;
+  background: linear-gradient(45deg, #00d4ff50, #8f6dff50);
+  filter: blur(60px); pointer-events: none; z-index: -1;
+}
+.section { width: min(1100px, 92vw); margin: 2.5rem auto; }
+.glass {
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+}
+.nav-wrap {
+  margin: 1rem auto;
+  width: min(1100px, 92vw);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.4rem;
+}
+.brand { font-weight: 800; letter-spacing: 0.5px; }
+nav { display: flex; gap: 1rem; }
+nav a { color: var(--text); text-decoration: none; font-weight: 600; }
+.hero { padding: 3rem; text-align: center; }
+.hero h1 { font-size: clamp(2rem, 4vw, 3rem); margin: 0.4rem 0 1rem; }
+.hero p { color: var(--muted); max-width: 760px; margin: 0 auto; }
+.eyebrow { text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; color: #a8c4ff; }
+.actions { margin-top: 1.2rem; display: flex; flex-wrap: wrap; gap: 0.8rem; justify-content: center; }
+.btn {
+  border: none; border-radius: 999px; padding: 0.75rem 1.2rem;
+  color: white; text-decoration: none; cursor: pointer; font-weight: 700;
+}
+.btn-primary { background: var(--primary); }
+.btn-accent { background: var(--accent); }
+.btn-outline { background: transparent; border: 1px solid #86abff; }
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.course-card { padding: 1rem; }
+.course-card p { color: var(--muted); min-height: 52px; }
+.toggle { display: inline-flex; background: #0f1831; border-radius: 999px; padding: 4px; gap: 4px; }
+.toggle button { border: none; border-radius: 999px; padding: 0.6rem 1rem; background: transparent; color: #bfd0f1; cursor: pointer; }
+.toggle .active { background: #3759a8; color: white; }
+.pricing-label { color: var(--muted); margin-top: 0.8rem; }
+.video-wrap { padding: 1rem; }
+.video-wrap iframe { width: 100%; aspect-ratio: 16 / 9; border: none; border-radius: 14px; }
+.qr { width: 210px; height: 210px; object-fit: contain; border-radius: 14px; background: white; padding: 8px; }
+.booking-grid, .portal-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); gap: 1rem; }
+.booking-form, .booking-summary, .portal-card { padding: 1rem; }
+input, select, textarea {
+  width: 100%; margin-bottom: 0.65rem; padding: 0.75rem;
+  border-radius: 10px; border: 1px solid #5a73a3; background: #0f1934; color: white;
+}
+textarea { min-height: 90px; }
+.hidden { display: none; }
+.dashboard { margin-top: 1rem; background: #0f1831; border-radius: 12px; padding: 0.8rem; max-height: 340px; overflow: auto; }
+.whatsapp-float {
+  position: fixed; right: 1rem; bottom: 1rem; font-size: 1.5rem;
+  background: #1faa53; width: 50px; height: 50px; border-radius: 50%; display: grid; place-items: center;
+  text-decoration: none; color: white; box-shadow: 0 8px 24px #00000055;
+}
+@media (max-width: 760px) {
+  nav { display: none; }
+  .hero { padding: 2rem 1rem; }
+}

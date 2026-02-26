@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+equation.db
+node_modules/
