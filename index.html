@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Equation Builder</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <h1>Equation Builder</h1>
+      <p>Create a linear equation in the form <code>ax + b = c</code>.</p>
+
+      <form id="equation-form" class="card">
+        <label>
+          a
+          <input type="number" id="a" value="2" required />
+        </label>
+        <label>
+          b
+          <input type="number" id="b" value="4" required />
+        </label>
+        <label>
+          c
+          <input type="number" id="c" value="10" required />
+        </label>
+        <button type="submit">Solve for x</button>
+      </form>
+
+      <section class="result card" aria-live="polite">
+        <h2>Result</h2>
+        <p id="equation-text">2x + 4 = 10</p>
+        <p id="answer-text">x = 3</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
