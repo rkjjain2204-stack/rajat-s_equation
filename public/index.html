@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RKJ Equation | Advanced Mathematics Learning Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-ornament"></div>
+  <header class="glass nav-wrap">
+    <div class="brand">RKJ Equation</div>
+    <nav>
+      <a href="#courses">Courses</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#booking">Booking</a>
+      <a href="#portals">Portals</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section glass">
+      <p class="eyebrow">India's Premium Maths Coaching</p>
+      <h1>Advanced Mathematics Learning Platform</h1>
+      <p>Structured mentoring for JEE, Olympiads, boards, and thinking-based mathematics with personalized live support.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#courses">View Courses</a>
+        <a class="btn btn-outline" href="https://wa.me/919424135055" target="_blank" rel="noreferrer">Book Demo</a>
+        <a class="btn btn-accent" href="#booking">Enroll Now</a>
+      </div>
+    </section>
+
+    <section id="courses" class="section">
+      <h2>Courses</h2>
+      <div id="coursesGrid" class="courses-grid"></div>
+    </section>
+
+    <section id="pricing" class="section glass">
+      <h2>Pricing Structure</h2>
+      <div class="toggle">
+        <button id="oneOnOneToggle" class="active">One-on-One</button>
+        <button id="groupToggle">Group Classes</button>
+      </div>
+      <p id="pricingLabel" class="pricing-label"></p>
+    </section>
+
+    <section class="section youtube-section">
+      <h2>YouTube Learning Hub</h2>
+      <div class="video-wrap glass">
+        <iframe src="https://www.youtube.com/embed?listType=user_uploads&list=rkjequation" title="RKJ Equation YouTube channel"></iframe>
+      </div>
+      <a class="btn btn-outline" href="https://www.youtube.com/@rkjequation" target="_blank" rel="noreferrer">Visit Channel</a>
+    </section>
+
+    <section class="section glass" id="payment">
+      <h2>UPI Payment</h2>
+      <p><strong>UPI ID:</strong> <span id="upiId">9424135055@ptyes</span></p>
+      <img id="qrImage" alt="UPI QR code" class="qr" />
+      <div class="actions">
+        <a id="payUpi" class="btn btn-primary" href="#">Pay via UPI</a>
+        <button class="btn btn-outline" onclick="document.getElementById('qrImage').scrollIntoView({behavior:'smooth'})">Pay via QR</button>
+        <button class="btn btn-accent" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Confirm Payment</button>
+      </div>
+    </section>
+
+    <section class="section" id="booking">
+      <h2>Enrollment & Booking Flow</h2>
+      <div class="booking-grid">
+        <form id="bookingForm" class="glass booking-form">
+          <h3>Step 1: Fill Detailed Form</h3>
+          <input name="studentName" placeholder="Student Name" required />
+          <input name="parentName" placeholder="Parent Name" required />
+          <input name="phone" placeholder="Phone Number" required />
+          <input name="email" placeholder="Email" type="email" required />
+          <input name="className" placeholder="Class" required />
+          <select name="courseId" id="courseSelect" required></select>
+          <select name="mode" required>
+            <option value="one-on-one">1-on-1</option>
+            <option value="group">Group</option>
+          </select>
+          <input name="preferredSlots" placeholder="Preferred Time Slots" />
+          <input name="totalHours" type="number" min="1" value="1" placeholder="Total Hours" />
+          <textarea name="notes" placeholder="Notes"></textarea>
+          <button class="btn btn-primary" type="submit">Continue to Summary</button>
+        </form>
+
+        <div id="bookingSummary" class="glass booking-summary hidden">
+          <h3>Step 2: Booking Summary</h3>
+          <div id="summaryBody"></div>
+          <h4>Step 3: Payment Confirmation</h4>
+          <input id="paymentProof" placeholder="Upload screenshot link / transaction ID" />
+          <button id="confirmPaymentBtn" class="btn btn-accent">Submit Payment Confirmation</button>
+          <p id="bookingMessage"></p>
+        </div>
+      </div>
+    </section>
+
+    <section id="portals" class="section">
+      <h2>Secure Portals</h2>
+      <div class="portal-grid">
+        <div class="glass portal-card">
+          <h3>Student Portal</h3>
+          <p>See your own sessions, materials, attendance, progress, and notifications.</p>
+          <form id="studentLoginForm">
+            <input name="email" type="email" placeholder="Student Email" required>
+            <input name="password" type="password" placeholder="Password" required>
+            <button class="btn btn-primary" type="submit">Login as Student</button>
+          </form>
+          <div id="studentDashboard" class="dashboard hidden"></div>
+        </div>
+
+        <div class="glass portal-card">
+          <h3>Admin Dashboard</h3>
+          <p>Approve payments, generate student codes, manage sessions, attendance, pricing and WhatsApp notifications.</p>
+          <form id="adminLoginForm">
+            <input name="email" type="email" placeholder="Admin Email" required>
+            <input name="password" type="password" placeholder="Password" required>
+            <button class="btn btn-primary" type="submit">Admin Login</button>
+          </form>
+          <div id="adminDashboard" class="dashboard hidden"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <a href="https://wa.me/919424135055" class="whatsapp-float" target="_blank" rel="noreferrer">💬</a>
+
+  <script src="app.js"></script>
+</body>
+</html>
