@@ -1,6 +1,15 @@
 # Equation Builder App
 
-A tiny browser app that solves linear equations in the form `ax + b = c`.
+A small browser app for solving equations in the form `ax + b = c`.
+
+## Features
+
+- Real-time updates as you type.
+- Handles all linear cases:
+  - one solution,
+  - no solution,
+  - infinitely many solutions.
+- Displays simple step-by-step algebra.
 
 ## Run locally
 
